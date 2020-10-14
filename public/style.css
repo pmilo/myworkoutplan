@@ -17,7 +17,7 @@ body {
     display: grid;
 
     grid-template-areas:
-    'header header header header header header header header header header'
+    'menu header header header header header header header header header'
     'menu main main main main main main main main main'
     'footer footer footer footer footer footer footer footer footer footer';
 
@@ -36,36 +36,64 @@ body {
     grid-area: header;
     background-color: #2A2D33;
     color: #fff;
-    background-color: rgb(236, 236, 253);
+    background-color: rgb(247, 247, 253);
 }
 
 .logo {
   background-color: rgb(7, 209, 148);
-  height: 100%;
-  width: 10.23%;
+  height: 100px;
+  /* width: 11.55%; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+
+nav {
+    width: 100%;
+}
 /* -------------------------------------------------------------------------- */
 /*  MENU/NAV */
 /* -------------------------------------------------------------------------- */
 
 .menu {
+    font-size: .9rem;
     color: #fff;
     grid-area: menu;
     background-color: #2A2D33;
-    /* width: 100%; */
+
+    display: flex;
+    /* flex-direction: row; */
 }
 
 .menu ul {
+    margin: 0;
     list-style-type: none;
-    padding: 0;
+    padding-left: 2em;
+    padding-top: 2em;
 }
+
+.menu li {
+    padding: .2em 0;
+}
+
+.menu li i {
+    margin-right: 1em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  MAIN */
+/* -------------------------------------------------------------------------- */
 
 .main {
     height: 1400px;
     grid-area: main;
-    background-color: #FFF;
+    background-color: rgb(236, 236, 253);
     /* text-decoration: none; */
+    /* display: flex;
+    justify-content: flex-start; */
+    padding: 2em;
 }
 
 .footer {
@@ -75,10 +103,36 @@ body {
     color: #fff;
 }
 
+/* -------------------------------------------------------------------------- */
+/*  PLAN */
+/* -------------------------------------------------------------------------- */
+
 .plan-box {
     margin: 1em;
-    /* background-color: red; */
+    background-color: rgb(247, 247, 253);
     max-width: 850px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 10px  rgb(219, 219, 232);
+    position: relative;
+}
+
+.tab-top {
+    font-size: .9rem;
+    min-height: 30px;
+    min-width: 126px;
+    color: rgb(147, 150, 163);
+    background-color: #F7F7FD;
+    display: inline-block;
+    padding: .3em 2em .3em 2em;
+    /* float: right; */
+    position: relative;
+    top: -28px;
+    left: 724.5px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 40px;
+
+    text-align: center;
+
 }
 
 .add-plan {
@@ -91,19 +145,19 @@ body {
 }
 
 .plus-btn {
-    font-size: 1.4rem;
-    margin-top: .5em;
+    font-size: 1.2rem;
+    padding: .5em 0 .5em 1.4em;
     color: rgb(7, 209, 148);
     filter: drop-shadow(0px 1px 1px #ccc);
-    /* shadow-filter: 1px 1px 3px #ccc; */
 }
 
 .plan-row-container {
-    background-color: #fff;
+    /* background-color: #fff; */
     /* width: 30%; */
     /* margin: 1em; */
     /* height: 100%; */
     display: flex;
+    justify-content: center;
 }
 
 .plan-row {
@@ -142,17 +196,17 @@ body {
 
 .reps {
     color: #fff;
-    background-color: rgb(198, 198, 220);
+    background-color: #d3d3e8;
     font-weight: bold;
 }
 
 .weight {
-    border-left: 2px solid #fff;
+    /* border-left: 2px solid #fff; */
 }
 
 
 .heading-row .plan-row {
-    background-color: #fff;
+    /* background-color: #fff; */
     align-items: flex-end;
     justify-content: flex-start;
     /* margin: 0; */
@@ -183,6 +237,8 @@ body {
 .label {
     font-size: .75rem;
     color: rgb(147, 150, 163);
+    background-color: #F7F7FD;
+
     padding-left: .3em;
 }
 
